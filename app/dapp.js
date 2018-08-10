@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Tabs, Tab } from 'react-bootstrap';
-
 import EmbarkJS from 'Embark/EmbarkJS';
 import Blockchain from './components/blockchain';
 import Whisper from './components/whisper';
 import Storage from './components/storage';
 import Layout from '../app/hoc/Layout';
-
+import {Route , BrowserRouter, Switch} from 'react-router-dom';
+import Compete from './components/compete/index';
+import Practice from './components/practice/index';
+import Rootpage from './components/home/index';
 
 import './dapp.css';
 
@@ -60,7 +62,14 @@ class App extends React.Component {
   render(){
     return ( 
      <Layout>
-    <div><h3>Embark - Usage Example</h3>
+
+       <Switch>
+       <Route exact path="/" component={Rootpage} />
+       <Route path="/compete" component={Compete} />
+       <Route path="/practice" component={Practice} />
+      
+       </Switch>
+    {/* <div><h3>Embark - Usage Example</h3>
       <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
         <Tab eventKey={1} title="Blockchain">
           <Blockchain />
@@ -72,10 +81,10 @@ class App extends React.Component {
           <Whisper enabled={this.state.whisperEnabled} />
         </Tab>
       </Tabs>
-    </div> 
+    </div>  */}
     </Layout> 
     );
   }
 }
 
-ReactDOM.render(<App></App>, document.getElementById('app'));
+ReactDOM.render(<BrowserRouter><App></App></BrowserRouter>, document.getElementById('app'));

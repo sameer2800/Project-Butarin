@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import {Menu} from 'semantic-ui-react';
 import {BrowserRouter, Route , Link,Redirect } from 'react-router-dom';
 import Compete from '../components/compete/index';
+import { withRouter } from 'react-router-dom';
 
 class Header extends Component {
 
@@ -19,7 +20,11 @@ class Header extends Component {
             })
 
             if(name === 'compete') {
-                <Route path="/compete" component={Compete} />
+                this.props.history.push('/compete');
+            }
+
+            if(name === 'practice') {
+                this.props.history.push('/practice');
             }
 
       } 
@@ -61,4 +66,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);
