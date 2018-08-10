@@ -6,6 +6,7 @@ import EmbarkJS from 'Embark/EmbarkJS';
 import Blockchain from './components/blockchain';
 import Whisper from './components/whisper';
 import Storage from './components/storage';
+import Layout from '../app/hoc/Layout';
 
 import './dapp.css';
 
@@ -56,7 +57,9 @@ class App extends React.Component {
   }
 
   render(){
-    return (<div><h3>Embark - Usage Example</h3>
+    return ( 
+     <Layout>
+    <div><h3>Embark - Usage Example</h3>
       <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
         <Tab eventKey={1} title="Blockchain">
           <Blockchain />
@@ -68,7 +71,9 @@ class App extends React.Component {
           <Whisper enabled={this.state.whisperEnabled} />
         </Tab>
       </Tabs>
-    </div>);
+    </div> 
+    </Layout> 
+    );
   }
 }
 
