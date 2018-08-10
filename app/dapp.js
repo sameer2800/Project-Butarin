@@ -8,6 +8,7 @@ import Whisper from './components/whisper';
 import Storage from './components/storage';
 import Layout from '../app/hoc/Layout';
 
+
 import './dapp.css';
 
 class App extends React.Component {

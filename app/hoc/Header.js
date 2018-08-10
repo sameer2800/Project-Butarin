@@ -1,14 +1,48 @@
 import React , {Component} from 'react';
 import {Menu} from 'semantic-ui-react';
-import {Route , Link,Redirect } from 'react-router-dom';
+import {BrowserRouter, Route , Link,Redirect } from 'react-router-dom';
+import Compete from '../components/compete/index';
 
 class Header extends Component {
 
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+            activeItem : ''
+        }
+      }
+
+      handleItemClick = (e, {name}) => {
+            this.setState({
+                activeItem : name
+            })
+
+            if(name === 'compete') {
+                <Route path="/compete" component={Compete} />
+            }
+
+      } 
 
     render () {
         return(
             <Menu style={ { marginTop : '10px'} }>
-            <Menu.Item header>Project Butarin</Menu.Item>
+                <Menu.Item header name='logo' active={this.state.activeItem === 'logo'} onClick={this.handleItemClick}>
+                Project Butarin
+                </Menu.Item>
+            
+            <Menu.Menu position='right'>
+                <Menu.Item name='practice' active={this.state.activeItem === 'practice'} onClick={this.handleItemClick}>
+                Practice
+                </Menu.Item>
+                <Menu.Item  name='compete' active={this.state.activeItem === 'compete'} onClick={this.handleItemClick}>
+                Compete
+                </Menu.Item>
+                <Menu.Item name='leaderboard'  active={this.state.activeItem === 'leaderboard'} onClick={this.handleItemClick}>
+                CryptoGeeks
+                </Menu.Item>
+            </Menu.Menu> 
+
             {/* <Link route="/">
               <a className="item"> Butarin </a>   
             </Link>    

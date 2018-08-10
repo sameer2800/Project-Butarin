@@ -19,7 +19,7 @@ class Blockchain extends React.Component {
       this.setState({valueSet: e.target.value});
     }
   
-    setValue(e){
+    setValue (e){
       e.preventDefault();
   
       var value = parseInt(this.state.valueSet, 10);

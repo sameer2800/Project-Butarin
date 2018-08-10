@@ -56,8 +56,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x1b9db2ef"
+      "type": "function"
     },
     {
       "constant": true,
@@ -76,8 +75,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x35c1d349"
+      "type": "function"
     },
     {
       "constant": false,
@@ -91,8 +89,7 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x373c7143"
+      "type": "function"
     },
     {
       "constant": false,
@@ -114,8 +111,7 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x459a9481"
+      "type": "function"
     },
     {
       "constant": true,
@@ -129,8 +125,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x481c6a75"
+      "type": "function"
     },
     {
       "constant": true,
@@ -144,8 +139,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x8da5cb5b"
+      "type": "function"
     },
     {
       "constant": true,
@@ -159,8 +153,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x90f85b93"
+      "type": "function"
     },
     {
       "constant": true,
@@ -174,8 +167,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0xc162d7da"
+      "type": "function"
     },
     {
       "constant": true,
@@ -189,8 +181,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0xca58a06c"
+      "type": "function"
     },
     {
       "constant": false,
@@ -208,8 +199,7 @@
       "outputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "function",
-      "signature": "0xda4613ea"
+      "type": "function"
     },
     {
       "constant": true,
@@ -223,18 +213,15 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0xe0dec0c0"
+      "type": "function"
     }
   ],
   "filename": "online_judge.sol",
-  "gas": 495468,
-  "gasPrice": null,
+  "gas": "auto",
   "type": "file",
   "deploy": true,
   "_gasLimit": false,
   "error": false,
   "realArgs": [],
-  "deployedAddress": "0xa502f9177d38BC8d6A9c57202be14B69Eaf9c7d5",
-  "transactionHash": "0xf28aa9c2f1bf34008d617075bac1e0e6a1c592c702934b7a646d05f8a4dbcbf9"
+  "deployedAddress": "0xa502f9177d38BC8d6A9c57202be14B69Eaf9c7d5"
 }
