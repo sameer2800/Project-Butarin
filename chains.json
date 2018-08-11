@@ -15,11 +15,15 @@
       },
       "0x4179610e92215c7b5b1fbc88f7dfb5be306e44500761a74a8d47a175b9014b4b": {
         "name": "SimpleStorage",
-        "address": "0xCEc57DD66A7e624C65e9eB38CB0bf344B8FE2854"
+        "address": "0x8508f85261FFf85DBd456F9A18e7dFe87D98FA3D"
       },
       "0xfd9637e5b4178488528fdcd913bb870cd1d4d7083ecddf8975b9b920b01bda53": {
         "name": "OnlineJudge",
         "address": "0xa502f9177d38BC8d6A9c57202be14B69Eaf9c7d5"
+      },
+      "0xb69242133912422dec2080282f0d9283a2a47fca8c363b306b2fe2101fbf7ddb": {
+        "name": "onlineJudge",
+        "address": "0xA1316A8CA59479Ef17bB2aC02f36374730a5AE73"
       }
     }
   }

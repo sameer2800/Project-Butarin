@@ -1,42 +1,27 @@
 pragma solidity ^0.4.17;
 
-contract OnlineJudge {
-    address public manager;
+import './question.sol';
+
+contract onlineJudge {
+    address[] public deployedQuestions;
     address public owner ;
-    string public managerKey;
-    uint public contractValue;
-    mapping( address => string) participantsIPFS;
-    mapping(address => uint) participantsGasValue;
-    address[] public participants;
     
-    function onlineJudge(string description, string publicKey) public payable {
-        owner = 0xAe70D0F5daC31074782E8CE65bf92eD3DfF6D25E;
-        manager = msg.sender;
-        managerKey = publicKey;
-        contractValue = msg.value;
+    function onlineJudge() public {
+        owner = msg.sender;
     }
     
-    function getManagerPublicKey() public view returns(string) {
-        return managerKey;
+    function createQuestion(string description, string publicKey) public {
+        address newQuestion = new Question( msg.sender, description , publicKey, owner);
+        deployedQuestions.push(newQuestion);
     }
     
-    function getManagerAddress() public view returns(address) {
-        return manager;
+    function getDeployedQuestions() public view returns(address[]) {
+        return deployedQuestions;
     }
     
-    function submitSolutionDetails(address particpant, uint gas,string hash) public {
-        require(msg.sender == owner);
-        participantsIPFS[msg.sender] = hash;
-        participantsGasValue[msg.sender] = gas;
-    }
-    
-    function rewardWinner(address participant) public {
-        require(msg.sender == manager);
-        participant.transfer(contractValue);
-    }
-    
-    function getParticipant(uint index) public view returns(address) {
-        return participants[index];
+    function getBalance() public view returns(uint) {
+        return this.balance;
     }
     
 }
+

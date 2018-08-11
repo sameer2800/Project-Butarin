@@ -1,4 +1,5 @@
 module.exports = {
 "SimpleStorage": require('./SimpleStorage').default,
-"OnlineJudge": require('./OnlineJudge').default
+"onlineJudge": require('./onlineJudge').default,
+"Question": require('./Question').default
 }

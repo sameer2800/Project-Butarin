@@ -10,6 +10,7 @@ import {Route , BrowserRouter, Switch} from 'react-router-dom';
 import Compete from './components/compete/index';
 import Practice from './components/practice/index';
 import Rootpage from './components/home/index';
+import NewQsn from './components/compete/newQsn';
 
 import './dapp.css';
 
@@ -65,8 +66,10 @@ class App extends React.Component {
 
        <Switch>
        <Route exact path="/" component={Rootpage} />
+       <Route path="/compete/new" component={NewQsn} />
        <Route path="/compete" component={Compete} />
        <Route path="/practice" component={Practice} />
+       
       
        </Switch>
     {/* <div><h3>Embark - Usage Example</h3>
